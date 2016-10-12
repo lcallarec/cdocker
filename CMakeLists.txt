@@ -8,7 +8,7 @@ set(SOURCE_FILES
         cdocker.h
         cdocker_model.h
         cdocker_model.c
-        main.c)
+)
 
-add_executable(cdocker ${SOURCE_FILES})
+add_library(cdocker SHARED ${SOURCE_FILES})
 target_link_libraries(cdocker curl json)
